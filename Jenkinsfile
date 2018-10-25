@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Project') {
           steps {
-            echo 'Cloning Project'
+            echo 'Cloning Project 1'
             input('Do you want to continue?')
           }
         }
