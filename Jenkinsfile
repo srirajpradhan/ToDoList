@@ -5,7 +5,6 @@ pipeline {
         stage('Clone Project') {
           steps {
             echo 'Cloning Project'
-            sh 'git clone https://github.com/srirajpradhan/ToDoList.git'
             input('Do you want to continue?')
           }
         }
