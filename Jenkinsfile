@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Logging into aws server') {
             steps {
-                echo 'Building trial 3..'
+                echo 'Building trial 3..i'
+		sh '
             }
         }
         stage('Test') {
