@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Logging into aws server') {
             steps {
-                echo 'Building trial 3..'
+                echo 'Building trial new..'
             }
         }
         stage('Test') {
