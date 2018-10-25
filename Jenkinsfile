@@ -2,12 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Logging into aws server') {
-            steps {
-                echo 'Building trial new..'
-            }
+        stage('Clone Project') {
+          steps {
+            echo 'Cloning Project'
+            sh 'git clone https://github.com/srirajpradhan/ToDoList.git'
+            input('Do you want to continue?')
+          }
         }
-        stage('Test') {
+        stage('Run App from Kubernet') {
             steps {
                 echo 'Testing..'
             }
