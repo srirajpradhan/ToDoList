@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ToDO List</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <script src="task-api.js">
+    </script>
+</head>
+
+<body style="background-color:#E6E6FA">
+
+<!--<div align="right">
+<img src="images.jpg" alt="todologo" width="230" height="120" >
+</div> -->
+<!--<div class="col-sm-4 form-group">
+          <div class="input-group">
+            <input class="form-control" id="searchtask" value="" placeholder="Search Task" name="search" type="text">
+               <div class="input-group-btn">
+                  <button type="submit" class="btn btn-warning" onclick="searchTask()"> Search  </button>
+               </div>
+          </div>
+        </div> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-11">
+                <h1 style= "color:Black">ToDo App</h1>
+                <table id="taskTable" class="table table-bordered table-condensed table-striped">
+                    <thead>
+                        <tr>
+                            <th>Edit</th>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Delete</th>
+							<th>Complete</th>
+                        </tr>
+
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <button type="button" id="addButton" class="btn btn-primary" onclick="addClick();">
+                    Add Task
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Task Information
+                    </div>
+                    <div class="panel-body">
+
+                        <div class="form-group">
+                            <label for="taskid">Task ID</label>
+                            <input type="text" id="taskid" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="taskname">Task Name</label>
+                            <input type="text" id="taskname" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" id="description" class="form-control" />
+                        </div>
+
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button type="button" id="updateButton" class="btn btn-primary" onclick="updateClick();">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="taskid" value="0" />
+</body>
+
+</html>
