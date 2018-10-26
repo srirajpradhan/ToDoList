@@ -5,8 +5,12 @@ pipeline {
         stage('Clone Project') {
           steps {
             echo 'Cloning Project'
-            sh 'git clone https://github.com/srirajpradhan/ToDoList.git'
-            input('Do you want to continue?')
+            def userInput = input(
+                id: 'userInput', message: 'Let\'s promote?', parameters: [
+                [$class: 'TextParameterDefinition', defaultValue: 'latest', description: 'Environment', name: 'env']
+                ])
+            echo ("Env: "+userInput)
+            sh 'cd ToDoList'
           }
         }
         stage('Run App from Kubernet') {
