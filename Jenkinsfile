@@ -17,6 +17,7 @@ pipeline {
               sh 'docker push srirajpradhan19/javaapp'
 	      sh 'kubectl run app --image=srirajpradhan19/javaapp:latest --port 8080'
 	      sh 'kubectl expose deployment app --type=LoadBalancer'
+	      sh 'echo $HOME/.kube/config'
             }
           }
         }
