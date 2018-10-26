@@ -15,8 +15,8 @@ pipeline {
 	      sh "docker tag srirajpradhan19/javaapp:"+userInput+ " srirajpradhan19/javaapp:latest"
               sh 'docker push srirajpradhan19/javaapp'
 	      echo 'sudo mkdir -p .kube && sudo cp -i /etc/kubernetes/admin.conf .kube/config && sudo chown $(id -u):$(id -g) .kube/config'
-	      sh 'kubectl run app --image=srirajpradhan19/javaapp:latest --port 8080'
-	      sh 'kubectl expose deployment app --type=LoadBalancer'
+	      sh 'sudo kubectl run app --image=srirajpradhan19/javaapp:latest --port 8080'
+	      sh 'sudo kubectl expose deployment app --type=LoadBalancer'
             }
           }
         }
