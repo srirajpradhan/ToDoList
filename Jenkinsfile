@@ -12,7 +12,7 @@ pipeline {
                 ])
               echo ("Env: "+userInput)
 	      sh "docker build -t srirajpradhann19/javaapp:" + userInput + " ."
-	      sh "docker login -u=srirajpradhan19 -p=${docker}"
+	      sh "docker login -u=srirajpradhan19 -p=${env.docker}"
 	      sh "docker tag srirajpradhan19/javaapp:"+userInput+ " srirajpradhan19/javaapp:latest"
               sh 'docker push srirajpradhan/javaapp'
             }
