@@ -1,5 +1,4 @@
 node {
-    stages {
         stage('Clone Project') {
           steps {
             echo 'Cloning Project'
@@ -29,5 +28,4 @@ node {
                 echo 'Deploying....'
             }
         }
-    }
 }
