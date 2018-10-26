@@ -25,7 +25,7 @@ $(document).ready(function() {
 	function taskList() {
 	    // Call Rest API to get a list of users
 	    $.ajax({
-	        url: 'http://18.232.107.17:30458/todolist/Tasks/Task/',
+	        url: 'http://18.232.107.17:30427/todolist/Tasks/Task/',
 	        type: 'GET',
 	        dataType: 'json',
 	        success: function(tasks) {
@@ -102,7 +102,7 @@ $(document).ready(function() {
 	// Handle click event on Update button
 	function taskUpdate(task) {
 	    $.ajax({
-	        url: "http://18.232.107.17:30458/todolist/Tasks/Task/" + task.id,
+	        url: "http://18.232.107.17:30427/todolist/Tasks/Task/" + task.id,
 	        type: 'PUT',
 	        contentType: "application/json;charset=utf-8",
 	        data: JSON.stringify(task), //exchange data to/from web server
@@ -143,7 +143,7 @@ $(document).ready(function() {
 	// Handle click event on Add button
 	function taskAdd(task) {
 	    $.ajax({
-	        url: "http://18.232.107.17:30458/todolist/Tasks/Task/",
+	        url: "http://18.232.107.17:30427/todolist/Tasks/Task/",
 	        type: 'POST',
 	        contentType: "application/json;charset=utf-8",
 	        data: JSON.stringify(task),
@@ -201,7 +201,7 @@ $(document).ready(function() {
 
 	    // Call REST API to get a list of Task
 	    $.ajax({
-	        url: "http://18.232.107.17:30458/todolist/Tasks/Task/" + id,
+	        url: "http://18.232.107.17:30427/todolist/Tasks/Task/" + id,
 	        type: 'GET',
 	        dataType: 'json',
 	        success: function(task) {
@@ -220,7 +220,7 @@ $(document).ready(function() {
 	    var id = $(ctl).data("id");
 
 	    $.ajax({
-	        url: "http://18.232.107.17:30458/todolist/Tasks/Task/" + id,
+	        url: "http://18.232.107.17:30427/todolist/Tasks/Task/" + id,
 	        type: 'DELETE',
 	        success: function(task) {
 	            $(ctl).parents("tr").remove();
