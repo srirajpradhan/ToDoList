@@ -11,7 +11,7 @@ pipeline {
                 [$class: 'TextParameterDefinition', defaultValue: 'latest', description: 'Environment', name: 'env']
                 ])
               echo ("Env: "+userInput)
-	      sh "docker build -t srirajpradhann19/javaapp:" + userInput
+	      sh "docker build -t srirajpradhann19/javaapp:" + userInput + "."
               sh 'docker images'
             }
           }
