@@ -10,8 +10,8 @@ pipeline {
                 id: 'userInput', message: 'Let\'s promote?', parameters: [
                 [$class: 'TextParameterDefinition', defaultValue: 'latest', description: 'Environment', name: 'env']
                 ])
+              echo ("Env: "+userInput)
             }
-            echo ("Env: "+userInput)
             sh 'cd ToDoList'
           }
         }
