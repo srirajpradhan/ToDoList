@@ -1,4 +1,6 @@
-node {
+pipeline {
+   agent any
+   steps {
         stage('Clone Project') {
           steps {
             echo 'Cloning Project'
@@ -28,4 +30,5 @@ node {
                 echo 'Deploying....'
             }
         }
+   }
 }
