@@ -13,7 +13,7 @@ $(document).ready(function() {
 			//console.log(task);
 			taskAddRow(task);
 		});
-    
+
 	}); */
 
 	var Task = {
@@ -25,7 +25,7 @@ $(document).ready(function() {
 	function taskList() {
 	    // Call Rest API to get a list of users
 	    $.ajax({
-	        url: 'http://localhost:8080/todolist/Tasks/Task/',
+	        url: 'http://172.31.40.85:8080/todolist/Tasks/Task/',
 	        type: 'GET',
 	        dataType: 'json',
 	        success: function(tasks) {
@@ -87,7 +87,7 @@ $(document).ready(function() {
 	        "</tr>";
 	    return ret;
 	}
-	
+
 
 	function handleException(request, message, error) {
 	    var msg = "";
@@ -229,7 +229,6 @@ $(document).ready(function() {
 	            handleException(request, message, error);
 	        }
 	    });
-		
-		
-	}
 
+
+	}
