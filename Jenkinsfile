@@ -14,7 +14,7 @@ pipeline {
 	      sh "docker login -u=srirajpradhan19 -p=${env.docker}"
 	      sh "docker tag srirajpradhan19/javaapp:"+userInput+ " srirajpradhan19/javaapp:latest"
               sh 'docker push srirajpradhan19/javaapp'
-              sh 'kubectl create deployment app --image=srirajpradhan19/javaapp:latest --port 8080'
+              sh 'kubectl create deployment app --image=srirajpradhan19/javaapp:latest'
 	      sh 'sudo kubectl expose deployment app --type=LoadBalancer'
             }
           }
