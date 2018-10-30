@@ -102,7 +102,7 @@ $(document).ready(function() {
 	// Handle click event on Update button
 	function taskUpdate(task) {
 	    $.ajax({
-	        url: "http://52.205.53.7:31272/todolist/Tasks/Task/" + task.id,
+	        url: "http://18.206.217.129:31272/todolist/Tasks/Task/" + task.id,
 	        type: 'PUT',
 	        contentType: "application/json;charset=utf-8",
 	        data: JSON.stringify(task), //exchange data to/from web server
