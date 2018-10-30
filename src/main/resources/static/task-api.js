@@ -25,7 +25,7 @@ $(document).ready(function() {
 	function taskList() {
 	    // Call Rest API to get a list of users
 	    $.ajax({
-	        url: 'http://52.205.53.7:31272/todolist/Tasks/Task/',
+	        url: 'http://18.206.217.129:31272/todolist/Tasks/Task/',
 	        type: 'GET',
 	        dataType: 'json',
 	        success: function(tasks) {
