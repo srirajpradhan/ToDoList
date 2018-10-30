@@ -143,7 +143,7 @@ $(document).ready(function() {
 	// Handle click event on Add button
 	function taskAdd(task) {
 	    $.ajax({
-	        url: "http://52.205.53.7:31272/todolist/Tasks/Task/",
+	        url: "http://18.206.217.129:31272/todolist/Tasks/Task/",
 	        type: 'POST',
 	        contentType: "application/json;charset=utf-8",
 	        data: JSON.stringify(task),
