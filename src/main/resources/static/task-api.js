@@ -25,7 +25,7 @@ $(document).ready(function() {
 	function taskList() {
 	    // Call Rest API to get a list of users
 	    $.ajax({
-	        url: 'http://18.206.217.129:31272/todolist/Tasks/Task/',
+	        url: 'http://52.203.51.206:32517/todolist/Tasks/Task/',
 	        type: 'GET',
 	        dataType: 'json',
 	        success: function(tasks) {
@@ -102,7 +102,7 @@ $(document).ready(function() {
 	// Handle click event on Update button
 	function taskUpdate(task) {
 	    $.ajax({
-	        url: "http://18.206.217.129:31272/todolist/Tasks/Task/" + task.id,
+	        url: "http://52.203.51.206:32517/todolist/Tasks/Task/" + task.id,
 	        type: 'PUT',
 	        contentType: "application/json;charset=utf-8",
 	        data: JSON.stringify(task), //exchange data to/from web server
